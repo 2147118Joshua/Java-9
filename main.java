@@ -1,8 +1,7 @@
 package Java_Lab_9;
 
 import java.util.*;
-//1.Multiple Inheritance using interface -- Done
-//2.Extending Interface
+
 
 interface Slry {
     void getSalary(float Qty, int Qlty);
