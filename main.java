@@ -4,8 +4,6 @@ import java.util.*;
 //1.Multiple Inheritance using interface -- Done
 //2.Extending Interface
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-
 interface Slry {
     void getSalary(float Qty, int Qlty);
 
@@ -49,12 +47,19 @@ class Main {
         // UserSalary car = new UserSalary();
         // car.cleanVehicle();
         Slry.MemberName();
-        System.out.print("\nLiters of Milk  : ");
-        float L_Milk = sc.nextInt();
-        // System.out.print("date " + a);
-        System.out.print("Quality of Milk \n     Enter\n  1-> A Quality \n  2-> B Quality \n  3-> C Quality\n");
-        int Q_Milk = sc.nextInt();
-        UserSalary r1 = new UserSalary();
-        r1.getSalary(L_Milk, Q_Milk);
+
+        try {
+            System.out.print("\nLiters of Milk  : ");
+            float L_Milk = sc.nextInt();
+            System.out.print("Quality of Milk \n     Enter\n  1-> A Quality \n  2-> B Quality \n  3-> C Quality\n");
+            int Q_Milk = sc.nextInt();
+            UserSalary r1 = new UserSalary();
+            r1.getSalary(L_Milk, Q_Milk);
+        } catch (Exception e) {
+            System.out.println("Enter the right details");
+        } finally {
+            System.out.println("Code executed");
+        }
+
     }
 }
